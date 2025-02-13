@@ -1,5 +1,5 @@
 from service import (
-    logout, login, register, todo_add,set_admin,todo_read
+    logout, login, register, todo_add,set_admin,todo_read,todo_update,todo_del
 )
 
 
@@ -55,11 +55,12 @@ def run():
         elif choice == '5':
             todo_read()
         elif choice == '6':
-            pass
+            todo_update()
         elif choice == '7':
-            pass
+            todo_del()
         elif choice == '8':
             username=input('Enter user which you want to make admin: ')
+            set_admin(username)
         elif choice == 'q':
             return
         else:
